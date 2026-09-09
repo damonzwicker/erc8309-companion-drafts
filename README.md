@@ -1,5 +1,7 @@
 # Vantage-Authority Resolution Profiles for ERC-8309
 
+**Authors:** Damon Zwicker, Tiago Merlini, Jimmy Shi, Pavlo Tvardovskyi, babyblueviper1
+
 **Companion specification — current cut: [v0.3.9](./8309-vantage-authority-companion-v0.3.9.md)**
 
 This document defines what a system does once ERC-8309's mesh has surfaced a divergence — two or more vantages reporting different values for the same observation — and no base rule says which value wins. ERC-8309 preserves divergence rather than silently deduplicating it; this companion defines the resolution layer on top: a three-state fault taxonomy, a resolution envelope (E1–E6) and verdict (V1–V5) that make every resolution's inputs recomputable, an output taxonomy with no false green and no false red, and four resolution profiles (A: divergence surfacing, the normative default that resolves nothing; B: quorum; C: registry-weighted; D: declared priority). Profile A runs in production as the ingestion boundary for TSEI. Every serializer, schema, and conformance claim in the document is bound explicitly, never inferred, and the reference implementation it cites is pinned by digest over structured evidence that anyone can recompute. It is co-authored by the five members of the working group that built and reviewed it, each having chosen co-authorship individually; the base standard it extends is ERC-8309 (ethereum/ERCs#1826).
